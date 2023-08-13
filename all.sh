@@ -1,5 +1,7 @@
 git submodule update --init
 
+cp index.html dist
+
 # PDF-Writer
 cd PDF-Writer
 npm install
