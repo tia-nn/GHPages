@@ -1,3 +1,6 @@
 [submodule "PDF-Writer"]
 	path = PDF-Writer
 	url = https://github.com/tia-nn/PDF-Writer
+[submodule "cpu-showcase"]
+	path = cpu-showcase
+	url = https://github.com/tia-nn/cpu-showcase

@@ -11,3 +11,10 @@ cd -
 npm run build
 cd ..
 cp -r PDF-Writer/dist/pdf-writer/ dist/
+
+# cpu-showcase
+cd cpu-showcase
+npm install
+npm run build
+cd ..
+cp -r cpu-showcase/public dist/cpu-showcase
