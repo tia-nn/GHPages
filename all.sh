@@ -5,8 +5,8 @@ cp index.html dist
 # PDF-Writer
 cd PDF-Writer
 npm install
-cd src/components/writer/language/parser/antlr/
-antlr4 -Dlanguage=TypeScript -visitor -o dist PDFLexer.g4 PDFParser.g4
+cd src/lsp-worker/antlr/
+docker-compose run antlr4-builder
 cd -
 npm run build
 cd ..
