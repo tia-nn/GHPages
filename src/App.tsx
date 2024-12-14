@@ -1,7 +1,6 @@
 import './App.css'
 import Link from "./components/Link"
 import BusinessCard from "./sections/BusinessCard"
-import SkillGraph from "./sections/SkillGraph"
 import Skills from "./sections/Skills"
 import Timeline from "./sections/Timeline"
 import showcaseURL from '/cpu-showcase/index.html?url'
