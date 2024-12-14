@@ -19,7 +19,7 @@ export default function SkillGraph() {
                     <path className="transition-all stroke-0 hover:stroke-[10] stroke-sky-blue fill-sky-blue pointer-events-auto" d={`${annularSelectorPath(0, 0, 100, 30, 150, 270)}`} />
                 </svg>
             </div>
-            <div>
+            <div className="grow">
                 <p>Python</p>
                 <p>Go</p>
             </div>

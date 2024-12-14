@@ -18,14 +18,13 @@ function App() {
         sm:relative sm:shadow-2xl
       ">
         <Timeline />
-        <SkillGraph />
+        {/* <SkillGraph /> */}
         <Skills />
 
-        <h1 className="text-lg">Tools</h1>
+        <h1 className="text-lg">作ってるおもちゃ</h1>
         <p>
           <Link href={showcaseURL}>cpu-showcase</Link>
-        </p>
-        <p>
+          <br />
           <Link href={pdfWriterURL}>pdf-writer</Link>
         </p>
       </div>
