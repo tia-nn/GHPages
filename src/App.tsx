@@ -11,7 +11,12 @@ function App() {
   return (
     <div className="min-h-screen bg-pattern pb-4">
       <BusinessCard />
-      <div className="max-w-screen-sm lg:max-w-screen-md 2xl:max-w-screen-lg px-6 md:px-0 mx-auto bg-white rounded-md shadow-2xl p-12 space-y-12">
+      <div className="
+        bg-white rounded-xl
+        max-w-screen-sm lg:max-w-screen-md 2xl:max-w-screen-lg
+        mx-auto px-6 py-12 space-y-12 md:px-0
+        sm:relative sm:shadow-2xl
+      ">
         <Timeline />
         <SkillGraph />
         <Skills />

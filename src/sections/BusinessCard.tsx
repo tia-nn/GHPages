@@ -3,10 +3,10 @@ import twitterIcon from 'devicon/icons/twitter/twitter-original.svg'
 
 export default function BusinessCard() {
     return (
-        <section className="h-screen p-4">
-            <div className="flex flex-col md:flex-row h-full w-full bg-white rounded-xl shadow-2xl">
+        <section className="relative h-svh p-4">
+            <div className="flex flex-col md:flex-row py-20 md:py-0 md:px-20 h-full w-full bg-white rounded-xl shadow-2xl">
                 <div className="h-1/2 md:w-1/2 md:h-full grow shrink flex-col justify-items-center content-center">
-                    <img src="/icon.jpeg" className=""></img>
+                    <img src="/crop_icon.jpeg" className="h-full max-h-fit"></img>
                 </div>
 
                 <div className="h-1/2 md:w-1/2 md:h-full grow shrink flex-col justify-items-center content-center">

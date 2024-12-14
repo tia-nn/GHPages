@@ -5,13 +5,12 @@ export default function Timeline() {
                 absolute
                 w-2 h-1/2 left-0 right-0 mx-auto
                 bg-linear-to-b
-                    from-transparent via-sky-blue-100 via-15% to-portage to-100%
+                    from-transparent via-sky-blue-100 via-15% to-portage
             "></span>
             <span className="
                 absolute
                 w-2 h-1/2 top-1/2 left-0 right-0 mx-auto
-                bg-linear-to-b
-                    from-portage from-85% to-transparent to-100%
+                bg-linear-to-b from-portage from-85%
             "></span>
 
             <div className="h-12"></div>
