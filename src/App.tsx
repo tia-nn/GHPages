@@ -1,6 +1,7 @@
 import './App.css'
 import Link from "./components/Link"
 import BusinessCard from "./sections/BusinessCard"
+import SkillGraph from "./sections/SkillGraph"
 import Skills from "./sections/Skills"
 import Timeline from "./sections/Timeline"
 import showcaseURL from '/cpu-showcase/index.html?url'
@@ -12,6 +13,7 @@ function App() {
       <BusinessCard />
       <div className="max-w-screen-sm lg:max-w-screen-md 2xl:max-w-screen-lg px-6 md:px-0 mx-auto bg-white rounded-md shadow-2xl p-12 space-y-12">
         <Timeline />
+        <SkillGraph />
         <Skills />
 
         <h1 className="text-lg">Tools</h1>

@@ -1,3 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+/* TODO: config を CSS に移行 https://tailwindcss.com/docs/v4-beta#css-first-configuration */
+@config "../tailwind.config.js";
