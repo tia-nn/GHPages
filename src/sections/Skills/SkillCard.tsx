@@ -1,16 +1,16 @@
 
-type Props = {
+export type Props = {
     mainIcon: string,
     title: string,
     years: string,
     icons?: string[],
-    ring?: boolean,
-    insetRing?: boolean,
+    isBusiness?: boolean,
+    isHobby?: boolean,
 }
 
-export default function SkillCard({ mainIcon, title, years, icons, ring, insetRing }: Props) {
+export default function SkillCard({ mainIcon, title, years, icons, isBusiness, isHobby }: Props) {
     return (
-        <div className={`flex rounded-md m-2 p-2 inset-shadow-sm ${ring ? "ring-4 ring-lavender" : ""} ${insetRing ? "inset-ring-4 inset-ring-portage" : ""}`}>
+        <div className={`flex rounded-md m-2 p-2 ${isBusiness ? "ring-4 ring-lavender" : ""} ${isHobby ? "inset-ring-4 inset-ring-portage" : ""}`}>
             <img src={mainIcon} className="size-16 sm:size-20 m-2" />
             <div className="flex flex-col m-2">
                 <h2 className="text-xl">{title}</h2>

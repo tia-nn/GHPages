@@ -1,4 +1,5 @@
-import SkillCard from "./Skills/SkillCard";
+import SkillCard, { Props as SkillCardProps } from "./Skills/SkillCard";
+
 import haxeIcon from 'devicon/icons/haxe/haxe-original.svg'
 import javaScriptIcon from 'devicon/icons/javascript/javascript-original.svg'
 import reactIcon from 'devicon/icons/react/react-original.svg'
@@ -18,39 +19,76 @@ import githubIcon from 'devicon/icons/github/github-original.svg'
 import nanoIcon from 'devicon/icons/nano/nano-original.svg'
 
 import goaIcon from './Skills/goaIcon.png'
+import { useCallback, useState } from "react";
+
+const skillSet = {
+    lang: [
+        { title: "Go", years: "2年", mainIcon: goIcon, icons: [goaIcon], isBusiness: true },
+        { title: "TypeScript", years: "3年", mainIcon: tsIcon, icons: [reactIcon, vueIcon, viteIcon, eslintIcon], isBusiness: true, isHobby: true },
+        { title: "Haxe", years: "3年", mainIcon: haxeIcon, icons: [javaScriptIcon, reactIcon], isBusiness: true, isHobby: true },
+        { title: "Python", years: "ちまちまずっと", mainIcon: pythonIcon, isHobby: true },
+        { title: "C", years: "ちょいちょい", mainIcon: cIcon, icons: [linuxIcon], isHobby: true },
+    ] as SkillCardProps[],
+    tools: [
+        { title: "Fedora Linux", years: "ずっと", mainIcon: fedoraIcon, isBusiness: true, isHobby: true },
+        { title: "Git", years: "ずっと", mainIcon: gitIcon, icons: [githubIcon], isBusiness: true, isHobby: true },
+        { title: "MySQL", years: "2年", mainIcon: mysqlIcon, isBusiness: true },
+        { title: "AWS", years: "2年", mainIcon: awsIcon, isBusiness: true },
+        { title: "nano", years: "nano派です", mainIcon: nanoIcon, isBusiness: true, isHobby: true },
+    ] as SkillCardProps[]
+}
 
 export default function Skills() {
+    const [selecting, setSelecting] = useState("all" as "all" | "business" | "hobby")
+
+    const handleSelectClick = useCallback((v: "business" | "hobby") => () => {
+        setSelecting((p) => p === v ? "all" : v)
+    }, [])
+
     return (
         <div>
             <div className="flex flex-wrap justify-center">
-                <div className="flex rounded-md m-2 p-1 inset-shadow-sm ring-4 ring-lavender">
-                    <div className="flex flex-col m-2">
-                        <p className="text-sm"> 業務 </p>
-                    </div>
+                <div
+                    className={`
+                        flex rounded-md m-2 p-3 ring-4 ring-lavender
+                        ${selecting === "business" ? "bg-lavender-100" : ""}
+                        ${selecting !== "all" && selecting !== "business" ? "" : ""}
+                    `}
+                    onClick={handleSelectClick("business")}
+                >
+                    <p className="text-sm"> 業務 </p>
                 </div>
-                <div className="flex rounded-md m-2 p-1 inset-shadow-sm inset-ring-4 inset-ring-portage">
-                    <div className="flex flex-col m-2">
-                        <p className="text-sm"> 趣味 </p>
-                    </div>
+                <div
+                    className={`
+                        flex rounded-md m-2 p-3 ring-4 ring-portage
+                        ${selecting === "hobby" ? "bg-portage-100" : ""}
+                        ${selecting !== "all" && selecting !== "hobby" ? "" : ""}
+                    `}
+                    onClick={handleSelectClick("hobby")}
+                >   <p className="text-sm"> 趣味 </p>
                 </div>
             </div>
 
             <h1 className="text-xl text-center m-2">言語</h1>
             <div className="flex flex-wrap justify-center">
-                <SkillCard mainIcon={haxeIcon} title="Haxe" years="3年" ring insetRing icons={[javaScriptIcon, reactIcon]}></SkillCard>
-                <SkillCard mainIcon={tsIcon} title="TypeScript" years="3年" ring insetRing icons={[reactIcon, vueIcon, viteIcon, eslintIcon]}></SkillCard>
-                <SkillCard mainIcon={pythonIcon} title="Python" insetRing years="ちまちまずっと"></SkillCard>
-                <SkillCard mainIcon={goIcon} title="Go" years="2年" ring icons={[goaIcon]}></SkillCard>
-                <SkillCard mainIcon={cIcon} title="C" years="ちょいちょい" insetRing icons={[linuxIcon]}></SkillCard>
+                {skillSet.lang.filter((skill) => {
+                    if (selecting === "all") return true
+                    if (selecting === "business") return skill.isBusiness
+                    if (selecting === "hobby") return skill.isHobby
+                }).map((skill) => (
+                    <SkillCard key={skill.title} {...skill}></SkillCard>
+                ))}
             </div>
 
             <h1 className="text-xl text-center m-2">ツール</h1>
             <div className="flex flex-wrap justify-center">
-                <SkillCard mainIcon={mysqlIcon} title="MySQL" years="2年" ring></SkillCard>
-                <SkillCard mainIcon={fedoraIcon} title="Fedora Linux" years="ずっと" ring insetRing></SkillCard>
-                <SkillCard mainIcon={awsIcon} title="AWS" years="2年" ring></SkillCard>
-                <SkillCard mainIcon={gitIcon} title="Git" years="ずっと" ring insetRing icons={[githubIcon]}></SkillCard>
-                <SkillCard mainIcon={nanoIcon} title="nano" years="nano派です" ring insetRing></SkillCard>
+                {skillSet.tools.filter((skill) => {
+                    if (selecting === "all") return true
+                    if (selecting === "business") return skill.isBusiness
+                    if (selecting === "hobby") return skill.isHobby
+                }).map((skill) => (
+                    <SkillCard key={skill.title} {...skill}></SkillCard>
+                ))}
             </div>
 
         </div >
