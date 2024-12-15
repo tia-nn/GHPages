@@ -9,7 +9,7 @@ export default function Portfolio() {
 
         <div className="p-4">
             <a href={showcaseURL} target="_blank">
-                <img src={cpuShowcaseImg} className="transition hover:scale-110 rounded-lg border shadow-md" />
+                <img src={cpuShowcaseImg} className="transition hover:scale-110 active:scale-110 rounded-lg border shadow-md" />
             </a>
             <p className="m-4">
                 CPU 回路シミュレーター。まだ 1 ビット CPU しか置いてません。
@@ -22,7 +22,7 @@ export default function Portfolio() {
 
         <div className="p-4">
             <a href={pdfWriterURL} target="_blank">
-                <img src={pdfWriterImg} className="transition hover:scale-110 rounded-lg border shadow-md" />
+                <img src={pdfWriterImg} className="transition hover:scale-110 active:scale-110 rounded-lg border shadow-md" />
             </a>
             <p className="m-4">
                 テキストで編集する PDF ライブエディタ。まだ機能は限定的ですが補完も使えます。

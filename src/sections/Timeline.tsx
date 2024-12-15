@@ -23,7 +23,7 @@ export default function Timeline() {
                     <span className="
                         absolute w-6 h-6 top-0 bottom-0 left-0 right-0 m-auto
                         bg-white rounded-full border-4 border-lavender
-                        transition-all group-hover:border-8
+                        transition-all group-hover:border-8 group-active:border-8
                     "></span>
                 </div>
 
@@ -33,7 +33,7 @@ export default function Timeline() {
                     <span className="
                         absolute w-6 h-6 top-0 bottom-0 left-0 right-0 m-auto
                         bg-white rounded-full border-4 border-lavender
-                        transition-all group-hover:border-8
+                        transition-all group-hover:border-8 group-active:border-8
                     "></span>
                 </div>
 
@@ -43,7 +43,7 @@ export default function Timeline() {
                     <span className="
                         absolute w-6 h-6 top-0 bottom-0 left-0 right-0 m-auto
                         bg-white rounded-full border-4 border-lavender
-                        transition-all group-hover:border-8
+                        transition-all group-hover:border-8 group-active:border-8
                     "></span>
                 </div>
 
@@ -53,7 +53,7 @@ export default function Timeline() {
                     <span className="
                         absolute w-6 h-6 top-0 bottom-0 left-0 right-0 m-auto
                         bg-white rounded-full border-4 border-lavender
-                        transition-all group-hover:border-8
+                        transition-all group-hover:border-8 group-active:border-8
                     "></span>
                 </div>
             </div>
