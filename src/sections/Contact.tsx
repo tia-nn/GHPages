@@ -11,7 +11,7 @@ export default function Contact() {
     return (
         <div className="">
             <h1 className="text-xl text-center my-4">お問い合わせ</h1>
-            <form className="flex flex-col space-y-4"
+            <form className="flex flex-col space-y-4 p-6"
                 action={formURL} target="_blank"
                 method="POST"
             >

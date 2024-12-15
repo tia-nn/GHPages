@@ -8,7 +8,7 @@ import Timeline from "./sections/Timeline"
 
 function App() {
   return (
-    <div className="min-h-screen bg-pattern space-y-4">
+    <div className="min-h-screen bg-pattern space-y-4 overflow-hidden">
       <BusinessCard />
       <div className="
         bg-white rounded-xl
