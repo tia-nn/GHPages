@@ -46,7 +46,7 @@ export default function Skills() {
     }, [])
 
     return (
-        <div>
+        <section>
             <div className="flex flex-wrap justify-center">
                 <div
                     className={`
@@ -70,27 +70,29 @@ export default function Skills() {
             </div>
 
             <h1 className="text-xl text-center m-2">言語</h1>
-            <div className="flex flex-wrap justify-center">
-                {skillSet.lang.filter((skill) => {
-                    if (selecting === "all") return true
-                    if (selecting === "business") return skill.isBusiness
-                    if (selecting === "hobby") return skill.isHobby
-                }).map((skill) => (
-                    <SkillCard key={skill.title} {...skill}></SkillCard>
-                ))}
+            <div className="flex flex-wrap justify-center transition-all">
+                {skillSet.lang.map((skill) => {
+                    const isNotSelecting =
+                        selecting === "business" && !skill.isBusiness
+                        || selecting === "hobby" && !skill.isHobby
+                    return <div className={`transition-all ${isNotSelecting ? "opacity-40" : ""}`}>
+                        <SkillCard key={skill.title} {...skill}></SkillCard>
+                    </div>
+                })}
             </div>
 
             <h1 className="text-xl text-center m-2">ツール</h1>
             <div className="flex flex-wrap justify-center">
-                {skillSet.tools.filter((skill) => {
-                    if (selecting === "all") return true
-                    if (selecting === "business") return skill.isBusiness
-                    if (selecting === "hobby") return skill.isHobby
-                }).map((skill) => (
-                    <SkillCard key={skill.title} {...skill}></SkillCard>
-                ))}
+                {skillSet.tools.map((skill) => {
+                    const isNotSelecting =
+                        selecting === "business" && !skill.isBusiness
+                        || selecting === "hobby" && !skill.isHobby
+                    return <div className={`transition-all ${isNotSelecting ? "opacity-40" : ""}`}>
+                        <SkillCard key={skill.title} {...skill}></SkillCard>
+                    </div>
+                })}
             </div>
 
-        </div >
+        </section >
     )
 }
