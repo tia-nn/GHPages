@@ -69,26 +69,26 @@ export default function Skills() {
                 </div>
             </div>
 
-            <h1 className="text-xl text-center m-2">言語</h1>
-            <div className="flex flex-wrap justify-center transition-all">
+            <h1 className="text-xl text-center my-4">言語</h1>
+            <div className="flex flex-wrap justify-center space-x-1 space-y-1">
                 {skillSet.lang.map((skill) => {
                     const isNotSelecting =
                         selecting === "business" && !skill.isBusiness
                         || selecting === "hobby" && !skill.isHobby
-                    return <div className={`transition-all ${isNotSelecting ? "opacity-40" : ""}`}>
-                        <SkillCard key={skill.title} {...skill}></SkillCard>
+                    return <div key={skill.title} className={`transition-all ${isNotSelecting ? "opacity-40" : ""}`}>
+                        <SkillCard {...skill}></SkillCard>
                     </div>
                 })}
             </div>
 
-            <h1 className="text-xl text-center m-2">ツール</h1>
-            <div className="flex flex-wrap justify-center">
+            <h1 className="text-xl text-center my-4">ツール</h1>
+            <div className="flex flex-wrap justify-center space-x-1 space-y-1">
                 {skillSet.tools.map((skill) => {
                     const isNotSelecting =
                         selecting === "business" && !skill.isBusiness
                         || selecting === "hobby" && !skill.isHobby
-                    return <div className={`transition-all ${isNotSelecting ? "opacity-40" : ""}`}>
-                        <SkillCard key={skill.title} {...skill}></SkillCard>
+                    return <div key={skill.title} className={`transition-all ${isNotSelecting ? "opacity-40" : ""}`}>
+                        <SkillCard {...skill}></SkillCard>
                     </div>
                 })}
             </div>

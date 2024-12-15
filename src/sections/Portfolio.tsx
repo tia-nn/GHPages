@@ -5,10 +5,10 @@ import pdfWriterURL from '/pdf-writer/index.html?url'
 import portfolioImg from "./Portfolio/portfolioCapture.png"
 
 export default function Portfolio() {
-    return (<section>
-        <h1 className="text-xl text-center m-2">作ってるおもちゃ[WIP]</h1>
+    return (<section className="space-y-10">
+        <h1 className="text-xl text-center my-4">作ってるおもちゃ[WIP]</h1>
 
-        <div className="p-4">
+        <div className="">
             <a href={showcaseURL} target="_blank">
                 <img src={cpuShowcaseImg} className="transition hover:scale-110 active:scale-110 rounded-lg border shadow-md" />
             </a>
@@ -21,7 +21,7 @@ export default function Portfolio() {
             </p>
         </div>
 
-        <div className="p-4">
+        <div className="">
             <a href={pdfWriterURL} target="_blank">
                 <img src={pdfWriterImg} className="transition hover:scale-110 active:scale-110 rounded-lg border shadow-md" />
             </a>
@@ -35,7 +35,7 @@ export default function Portfolio() {
             </p>
         </div>
 
-        <div className="p-4">
+        <div className="">
             <img src={portfolioImg} className="transition hover:scale-110 active:scale-110 rounded-lg border shadow-md" />
             <p className="m-4">
                 このページです。
