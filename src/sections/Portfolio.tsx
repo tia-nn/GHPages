@@ -2,6 +2,7 @@ import cpuShowcaseImg from "./Portfolio/cpuShowcaseCapture.png"
 import showcaseURL from '/cpu-showcase/index.html?url'
 import pdfWriterImg from "./Portfolio/pdfWriterCapture.png"
 import pdfWriterURL from '/pdf-writer/index.html?url'
+import portfolioImg from "./Portfolio/portfolioCapture.png"
 
 export default function Portfolio() {
     return (<section>
@@ -33,6 +34,19 @@ export default function Portfolio() {
                 </span>
             </p>
         </div>
+
+        <div className="p-4">
+            <img src={portfolioImg} className="transition hover:scale-110 active:scale-110 rounded-lg border shadow-md" />
+            <p className="m-4">
+                このページです。
+                <br />
+                <span className="text-sm">
+                    made with: TypeScript, React.js, TailwindCSS, Vite
+                </span>
+            </p>
+        </div>
+
+
 
     </section>)
 }
